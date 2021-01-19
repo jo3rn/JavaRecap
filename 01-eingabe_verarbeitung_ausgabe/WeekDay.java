@@ -1,4 +1,6 @@
-/* Übung 01 Aufgabe 3 */
+/* Übung 01 Aufgabe 3
+ * Link: https://www.youtube.com/watch?v=4kee9yI9FG8
+ */
 
 /* Die Datei WeekDay.java enthält ein Programm zur Berechnung des Wochentags und verwendet ausschließlich
  * Programmkonstrukte, wie im seminaristischen Unterricht erläutert. Lesen Sie den Quellcode langsam durch, so dass Sie
