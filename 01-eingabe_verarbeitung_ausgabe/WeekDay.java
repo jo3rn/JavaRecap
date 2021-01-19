@@ -1,15 +1,13 @@
 /* Übung 01 Aufgabe 3 */
 
-/*
- * Die Datei WeekDay.java enthält ein Programm zur Berechnung des Wochentags und verwendet ausschließlich
+/* Die Datei WeekDay.java enthält ein Programm zur Berechnung des Wochentags und verwendet ausschließlich
  * Programmkonstrukte, wie im seminaristischen Unterricht erläutert. Lesen Sie den Quellcode langsam durch, so dass Sie
  * nachvollziehen können, was Zeile für Zeile bei Ausführung passiert. (Das dauert eine Weile). Wechseln Sie in der
  * Lerngruppe spätestens alle 20 Zeilen die Rolle desjenigen, der den Code „laut denkend“ durchgeht. Stellen Sie sich
  * gegenseitig Rückfragen zu einzelnen Teilen, wie z.B. den if-Anweisungen oder warum eine Teilberechnung gebraucht
  * wird. Bei allen unklaren Programmteilen fragen Sie Ihre Tutor*innen! (und gibt es wirklich nichts, was Ihnen unklar
  * ist, dann erklären Sie doch mal einer Tutor*in, wie das mit den Schaltjahren funktioniert, so dass trotzdem der
- * richtige Wochentag rauskommt).
- */
+ * richtige Wochentag rauskommt). */
 
 import java.util.Scanner;
 
