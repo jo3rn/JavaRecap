@@ -1,4 +1,4 @@
-import java.util.Scanner;
+/* Übung 01 Aufgabe 3 */
 
 /*
  * Die Datei WeekDay.java enthält ein Programm zur Berechnung des Wochentags und verwendet ausschließlich
@@ -10,6 +10,9 @@ import java.util.Scanner;
  * ist, dann erklären Sie doch mal einer Tutor*in, wie das mit den Schaltjahren funktioniert, so dass trotzdem der
  * richtige Wochentag rauskommt).
  */
+
+import java.util.Scanner;
+
 public class WeekDay {
 
   public static void main(String[] args) {
