@@ -2,14 +2,16 @@
  * Link: https://www.youtube.com/watch?v=4kee9yI9FG8
  */
 
-/* Die Datei WeekDay.java enthält ein Programm zur Berechnung des Wochentags und verwendet ausschließlich
- * Programmkonstrukte, wie im seminaristischen Unterricht erläutert. Lesen Sie den Quellcode langsam durch, so dass Sie
- * nachvollziehen können, was Zeile für Zeile bei Ausführung passiert. (Das dauert eine Weile). Wechseln Sie in der
- * Lerngruppe spätestens alle 20 Zeilen die Rolle desjenigen, der den Code „laut denkend“ durchgeht. Stellen Sie sich
- * gegenseitig Rückfragen zu einzelnen Teilen, wie z.B. den if-Anweisungen oder warum eine Teilberechnung gebraucht
- * wird. Bei allen unklaren Programmteilen fragen Sie Ihre Tutor*innen! (und gibt es wirklich nichts, was Ihnen unklar
- * ist, dann erklären Sie doch mal einer Tutor*in, wie das mit den Schaltjahren funktioniert, so dass trotzdem der
- * richtige Wochentag rauskommt). */
+/* Die Datei WeekDay.java enthält ein Programm zur Berechnung des Wochentags und verwendet
+ * ausschließlich Programmkonstrukte, wie im seminaristischen Unterricht erläutert.
+ * Lesen Sie den Quellcode langsam durch, so dass Sie nachvollziehen können, was Zeile für Zeile
+ * bei Ausführung passiert. (Das dauert eine Weile). Wechseln Sie in der Lerngruppe spätestens
+ * alle 20 Zeilen die Rolle desjenigen, der den Code „laut denkend“ durchgeht.
+ * Stellen Sie sich gegenseitig Rückfragen zu einzelnen Teilen,
+ * wie z.B. den if-Anweisungen oder warum eine Teilberechnung gebraucht wird.
+ * Bei allen unklaren Programmteilen fragen Sie Ihre Tutor*innen!
+ * Und gibt es wirklich nichts, was Ihnen unklar ist, dann erklären Sie doch mal einer Tutor*in,
+ * wie das mit den Schaltjahren funktioniert, so dass trotzdem der richtige Wochentag rauskommt). */
 
 import java.util.Scanner;
 
@@ -25,7 +27,7 @@ public class WeekDay {
 
     // 1. January 1900 was a Monday
 
-    shift = (year-1900) + (year-1900)/4 + (day-1);
+    shift = (year - 1900) + (year - 1900) / 4 + (day - 1);
 
     if (month > 1) {
       shift = shift + 31;
@@ -63,7 +65,7 @@ public class WeekDay {
 
     /* In case of January or February of a "Schaltjahr" remove 1 from shift */
 
-    if  ( ((month == 1) || (month == 2)) && (year % 4 == 0)) {
+    if  (((month == 1) || (month == 2)) && (year % 4 == 0)) {
       shift = shift - 1;
     }
 
