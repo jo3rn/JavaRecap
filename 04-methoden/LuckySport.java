@@ -1,5 +1,5 @@
 /* Übung 04 Aufgabe 2
- * Link:
+ * Link: https://www.youtube.com/watch?v=j9HchBcfsv0
  */
 
 /* Betrachten Sie folgende Notentabellen im Leistungskurs Sport für Schülerinnen (links)
@@ -28,9 +28,35 @@
 public class LuckySport {
 
   public static void main(String[] args) {
+    System.out.println(luckyPass(true, 100));
+    System.out.println(luckyPass(true, 200));
+    System.out.println(luckyPass(true, 400));
+    System.out.println(luckyPass(false, 100));
+    System.out.println(luckyPass(false, 200));
+    System.out.println(luckyPass(false, 400));
+    System.out.println(luckyPass(true, -400));
+    System.out.println(luckyPass(false, 300));
   }
 
   public static double luckyPass(boolean isFemale, int distance) {
+    if (isFemale) {
+      if (distance == 100) {
+        return 15.9;
+      } else if (distance == 200) {
+        return 32.7;
+      } else if (distance == 400) {
+        return 81;
+      }
+    } else {
+      if (distance == 100) {
+        return 13.9;
+      } else if (distance == 200) {
+        return 28.6;
+      } else if (distance == 400) {
+        return 65;
+      }
+    }
 
+    return -1;
   }
 }
