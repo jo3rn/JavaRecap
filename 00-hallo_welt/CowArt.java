@@ -2,8 +2,9 @@
  * Link: https://www.youtube.com/watch?v=7ob7s8VVSzM
  */
 
-/* Programmieren Sie nur mit den Kenntnissen der SU 0 eine Klasse CowArt, die beim Ausführen acht Zeilen Text auf der
- * Konsole ausgibt, und zwar derart, dass ein Bild entsteht (das nennt man ASCII-Art). Das Bild soll wie folgt aussehen:
+/* Programmieren Sie nur mit den Kenntnissen der SU 0 eine Klasse CowArt, die beim Ausführen acht
+ * Zeilen Text auf der Konsole ausgibt, und zwar derart, dass ein Bild entsteht
+ * (das nennt man ASCII-Art). Das Bild soll wie folgt aussehen:
      ________________________
    < Ich gehöre zu Niemandem >
      ------------------------
