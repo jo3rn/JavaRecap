@@ -74,7 +74,7 @@ public class CaesarsCode {
     System.out.println("Anzahl ' ':" + frequencies[' ']);
     System.out.println("Anzahl 1:" + frequencies['1']);
     System.out.println(encrypt(text, key));
-    System.out.println(decrypt(encrypt(text, key),key));
+    System.out.println(decrypt(encrypt(text, key), key));
   }
 
   public static int[] getFrequency(String s) {
