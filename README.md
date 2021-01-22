@@ -1,7 +1,7 @@
 # JavaRecap
 Code of a selection of exercises of Programmierung 1 (DM/WIN) with Prof. Dr. Konert at the University of Applied Sciences Fulda (winter term 2020/2021)
 
-The associated videos with explanations are [available on YouTube](https://www.youtube.com/playlist?list=PLiisIVtqYuRvFwSDJ36T35E3RFA_PJK7P).
+The associated videos with explanations are [available on YouTube](https://www.youtube.com/playlist?list=PLiisIVtqYuRvFwSDJ36T35E3RFA_PJK7P) (in German).
 
 ## Linting
 This project uses a linter to check the code style on every pull request:  
