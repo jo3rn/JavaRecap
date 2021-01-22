@@ -1,3 +1,6 @@
+/* Übung 07 Aufgabe 2
+ * Link: https://www.youtube.com/watch?v=pIvUQu9i8ww
+ */
 
 // created by J. Konert
 
