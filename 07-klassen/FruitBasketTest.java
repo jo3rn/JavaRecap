@@ -2,6 +2,10 @@
  * Link: https://www.youtube.com/watch?v=pIvUQu9i8ww
  */
 
+/*
+ * Aufgabenstellung siehe FruitBasket.java
+ */
+
 // created by J. Konert
 
 public class FruitBasketTest {

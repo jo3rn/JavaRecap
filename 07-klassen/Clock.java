@@ -1,5 +1,5 @@
 /* Hausaufgabe 07 Aufgabe 1
- * Link:
+ * Link: https://www.youtube.com/watch?v=z6mC4AXe8Mc
  */
 
 /* In dieser Aufgabe sollen Sie eine Klasse Clock erstellen (welche eine simple Uhr repräsentiert).
@@ -19,52 +19,50 @@
  * Die main Methode zeigt möglichen Code und die davon erzeugte Konsolenausgabe als Kommentar.
  */
 public class Clock {
-  public static void main(String[] args) {
-    Clock basicClock = new Clock();
-    basicClock.printStatus(); // Aktuelle Uhrzeit: 0 Uhr
-    basicClock.tick();
-    basicClock.printStatus(); // Aktuelle Uhrzeit: 1 Uhr
-    for (int i = 1; i <= 12; i++) {
-      basicClock.tick();
-    }
-    basicClock.printStatus(); // Aktuelle Uhrzeit: 13 Uhr
-    basicClock.switchMode();
-    basicClock.printStatus(); // Aktuelle Uhrzeit: 1 pm
-    for (int i = 1; i <= 10; i++) {
-      basicClock.tick();
-    }
-    basicClock.printStatus(); // Aktuelle Uhrzeit: 11 pm
-    basicClock.switchMode();
-    basicClock.printStatus(); // Aktuelle Uhrzeit: 23 Uhr
-    basicClock.switchToSummerTime();
-    basicClock.printStatus(); // Aktuelle Uhrzeit: 0 Uhr
-    basicClock.tick();
-    basicClock.printStatus(); // Aktuelle Uhrzeit: 1 Uhr
-    basicClock.switchToWinterTime();
-    basicClock.printStatus(); // Aktuelle Uhrzeit: 0 Uhr
-    basicClock.switchMode();
-    basicClock.printStatus(); // Aktuelle Uhrzeit: 12 am
-  }
+  private int hours = 0;
+  private boolean isTwelveHourMode = false;
+  private boolean isSummerTime = false;
 
   public void tick() {
-
+    if (++hours == 24) {
+      hours = 0;
+    }
   }
 
   public void printStatus() {
+    System.out.print("Aktuelle Uhrzeit: ");
+    if (isTwelveHourMode) {
+      if (hours == 0) {
+        System.out.print(12); // 12 am
+      } else {
+        System.out.print(hours % 12);
+      }
 
+      if (hours >= 12) {
+        System.out.println(" pm");
+      } else {
+        System.out.println(" am");
+      }
+    } else {
+      System.out.println(hours + " Uhr");
+    }
   }
 
   public void switchMode() {
-
+    isTwelveHourMode = !isTwelveHourMode;
   }
 
   public void switchToSummerTime() {
-
+    if (!isSummerTime && ++hours == 24) {
+      hours = 0;
+    }
+    isSummerTime = true;
   }
 
   public void switchToWinterTime() {
-
+    if (isSummerTime && --hours == -1) {
+      hours = 23;
+    }
+    isSummerTime = false;
   }
-
-
 }
