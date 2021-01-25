@@ -20,7 +20,7 @@ public class StudentTest {
 
     Student[] students = Student.filter(new Student[] {susan, lara, pieter, clara}, 'f', 1, 2);
     boolean checkStudents = students != null && students.length == 1 && students[0] == lara;
-    System.out.println(checkSusan && checkLara && checkPieter && checkStudents ?
-        "all Tests passed!": "Test failed! See sourcecode for details.");
+    System.out.println(checkSusan && checkLara && checkPieter && checkStudents
+        ? "all Tests passed!" : "Test failed! See sourcecode for details.");
   }
 }

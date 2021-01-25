@@ -16,17 +16,18 @@
  */
 public class HinzOrKunz {
   public static void main(String[] args) {
-    System.out.println(Outer.Inner.Name);
+    System.out.println(Outer.Inner.name);
   }
 }
 
 class Outer {
   static class Inner {
-    static String Name = "Hinz";
+    static String name = "Hinz";
   }
+
   static Helper Inner = new Helper();
 }
 
 class Helper {
-  String Name = "Kunz";
+  String name = "Kunz";
 }
