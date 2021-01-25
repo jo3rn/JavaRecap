@@ -1,5 +1,5 @@
 /* Übung 08 Knobelaufgabe
- * Link:
+ * Link: https://www.youtube.com/watch?v=YcKkkkX4fHc
  */
 
 /* Gehen Sie das folgende Programm in Gedanken durch, auch wenn es etwas merkwürdig aussieht

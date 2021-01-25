@@ -1,3 +1,11 @@
+/* Übung 08 Aufgabe 1
+ * Link: https://www.youtube.com/watch?v=isoADJZO77k
+ */
+
+/*
+ * Aufgabenstellung siehe Student.java
+ */
+
 public class StudentTest {
   public static void main(String[] ignoredArgs) {
     Student susan = new Student("Susan Glow", 'd', "susan.glow@cs.hs-fulda.de", 2, 0);
