@@ -1,5 +1,5 @@
 /* Hausaufgabe 08 Aufgabe 0
- * Link:
+ * Link: https://www.youtube.com/watch?v=jFPvrtt6MSg
  */
 
 /* Seien santaClause und christChild die einzigen zwei möglichen Instanzen der
@@ -28,7 +28,34 @@
  * Denkanstoß: Wieso ist das Ergebnis wenig erstaunlich? (Die Antwort ist nicht abzugeben)
  * (Hinweis: Eine Schleife für 7,8 Milliarden Iterationen dauert ca. 5 Minuten je nach CPU.
  * Wenn es Ihnen zu lange dauert, rechnen sie nur für alle Deutschen,
- * das sind ca. 83 Milllionen, in ca. 0.5 Sekunden).
+ * das sind ca. 83 Millionen, in ca. 0.5 Sekunden).
  */
 public class FairyChristmasCharacter {
+
+  private int waitingWeight;
+
+  private static long waitingCount = 0;
+
+  private static FairyChristmasCharacter santaClause = new FairyChristmasCharacter(1);
+  private static FairyChristmasCharacter christChild = new FairyChristmasCharacter(-1);
+
+  private FairyChristmasCharacter(int waitingWeight) {
+    this.waitingWeight = waitingWeight;
+  }
+
+  public void waitingForYou() {
+    waitingCount += waitingWeight;
+  }
+
+  public static FairyChristmasCharacter getSantaClause() {
+    return santaClause;
+  }
+
+  public static FairyChristmasCharacter getChristChild() {
+    return christChild;
+  }
+
+  public static void printWaitingCount() {
+    System.out.println("Result: " + waitingCount);
+  }
 }
