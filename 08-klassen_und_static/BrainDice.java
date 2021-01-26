@@ -1,5 +1,5 @@
 /* Hausaufgabe 08 Aufgabe 2
- * Link:
+ * Link: https://www.youtube.com/watch?v=GQuHUtw_OMc
  */
 
 /* Schreiben Sie eine Klasse BrainDice, welche garantiert nur eine Instanz zulässt (Singleton).
@@ -19,10 +19,63 @@
  * wieder eine der Zahlen von 1 bis 6, usw.
  *
  * Schreiben Sie eine Methode public static void main(String[] args) in der Klasse BrainDice,
- * welche mindestens zwei Instanzen von BrainDice anlegt mit unterschiedlichen Augenzahlen
- * (z.B. 6 und 9) und jeweils für die doppelte Anzahl an Augen (z.B. 12 und 18 mal) die Methode
- * nextThrow() aufruft und die Zahlen auf die Konsole ausgibt.
+ * welche zwei Mal eine Instanz von BrainDice abruft (und natürlich in beiden Fällen das gleiche
+ * Objekt erhält). Dies geht, indem Sie z.B. zwei Mal .getInstance() aufrufen.
+ * Speichern Sie beide Referenzen in verschiedenen Variablen.
+ * Nehmen Sie als Augenzahl z.B. 9 und rufen Sie anschließend doppelt so oft (z.B. 18 mal)
+ * die Methode nextThrow() auf und geben Sie die Zahlen auf die Konsole aus.
+ * Verwenden Sie dabei beide Referenzvariablen (z.B. im Wechsel).
+ * Das Verhalten sollte identisch sein, egal ob Sie nur eine oder beide Referenzvariablen verwenden,
+ * da die gleiche Instanz des Objektes referenziert wird (Singleton).
  */
+
+import java.util.Random;
+
 public class BrainDice {
 
+  private int numberOfEyes;
+  private int[] eyesSequence;
+  private int eyesSequenceIndex = 0;
+
+  private static BrainDice instance = new BrainDice(9);
+
+  private BrainDice(int numberOfEyes) {
+    this.numberOfEyes = numberOfEyes;
+    generateEyesSequence();
+  }
+
+  public int nextThrow() {
+    if (eyesSequenceIndex == numberOfEyes) {
+      eyesSequenceIndex = 0;
+      generateEyesSequence();
+    }
+    return eyesSequence[eyesSequenceIndex++];
+  }
+
+  private void generateEyesSequence() {
+    eyesSequence = new int[numberOfEyes];
+    int eyes = 1;
+    Random random = new Random();
+    while (eyes <= numberOfEyes) {
+      int randomIndex = random.nextInt(numberOfEyes);
+      if (eyesSequence[randomIndex] == 0) {
+        eyesSequence[randomIndex] = eyes;
+        eyes++;
+      }
+    }
+  }
+
+  public static void main(String[] args) {
+    BrainDice brainDiceOne = getInstance();
+    BrainDice brainDiceTwo = getInstance();
+
+    for (int i = 0; i < brainDiceOne.numberOfEyes * 3; i++) {
+      System.out.println(brainDiceOne.nextThrow());
+      System.out.println(brainDiceTwo.nextThrow());
+    }
+  }
+
+  public static BrainDice getInstance() {
+    return instance;
+  }
 }
