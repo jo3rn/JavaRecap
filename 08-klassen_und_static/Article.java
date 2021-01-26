@@ -1,5 +1,5 @@
 /* Hausaufgabe 08 Aufgabe 1
- * Link:
+ * Link: https://www.youtube.com/watch?v=kaKytF988_Q
  */
 
 /* Implementieren Sie eine Klasse Article,
@@ -24,4 +24,32 @@
  *    wenn Sie in der letzten Zeile Ihre main-Methode anhalten würden.
  */
 public class Article {
+  private String name;
+  private int price;
+  private int number;
+
+  private static int nextNumber = 1;
+  private static int amountOfArticles = 0;
+
+  public Article(String name, int price) {
+    this.name = name;
+    this.price = price;
+    this.number = nextNumber++;
+    amountOfArticles++;
+  }
+
+  public String toString() {
+    return String.format("%s (%d): %.2f€\nGesamtartikel: %d\n",
+        name, number, price / 100f, amountOfArticles);
+  }
+
+  public static void changePrices(Article[] articles, double percentage) {
+    for (int i = 0; i < articles.length; i++) {
+      articles[i].price *= (1 + percentage);
+    }
+  }
+
+  public static int getAmountOfArticles() {
+    return amountOfArticles;
+  }
 }
