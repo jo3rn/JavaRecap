@@ -24,7 +24,7 @@ public class CodingBat {
     if (rows == 0) {
       return rows;
     } else {
-      return rows + triangle(rows -1);
+      return rows + triangle(rows - 1);
     }
   }
 
@@ -63,7 +63,7 @@ public class CodingBat {
   private static void testPowerN() {
     System.out.println("Testing powerN... passes if all true:");
     System.out.println("Test 01: " + (powerN(3, 1) == 3));
-    System.out.println("Test 02: " + (powerN(3, 2) ==9));
+    System.out.println("Test 02: " + (powerN(3, 2) == 9));
     System.out.println("Test 03: " + (powerN(3, 3) == 27));
     System.out.println("Test 04: " + (powerN(2, 1) == 2));
     System.out.println("Test 05: " + (powerN(2, 2) == 4));
