@@ -10,11 +10,11 @@
  * welche die kürzeste Zugfolge als String zurückgibt (pro Zug eine Zeile),
  * um in dieser Variante n Scheiben von der Säule "from" zur Säule "to" zu ziehen.
  *
+ *         --|--              |               |
  *           |                |               |
+ *        ---|---             |               |
  *           |                |               |
- *           |                |               |
- *           |                |              -|-
- *            |               |             --|--
+ *       ----|----            |               |
  */
 public class Hanoi {
 
