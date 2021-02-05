@@ -58,8 +58,7 @@ public class ShoppingCart {
         new ShopItem(2.59, 11),
         new ShopItem(3.33, 0),
         new ShopItem(9.99, 2),
-        new ShopItem(0.25, 1)
-    };
+        new ShopItem(0.25, 1) };
 
     double totalIterativeShopItem = totalIterative(shopItems);
     System.out.println(totalIterativeShopItem + "€ (Gesamtsumme objektorientiert berechnet)");
@@ -82,6 +81,16 @@ public class ShoppingCart {
     return total;
   }
 
+  private static double totalIterative(ShopItem[] shopItems) {
+    double total = 0;
+
+    for (int i = 0; i < shopItems.length; i++) {
+      total += shopItems[i].getTotal();
+    }
+
+    return total;
+  }
+
   private static double totalRecursive(double[] itemPrices, double[] itemCount, int startPos) {
     if (itemPrices.length == 0) {
       return 0;
@@ -99,15 +108,5 @@ public class ShoppingCart {
     }
 
     return total + totalRecursive(itemPrices, itemCount, startPos + 1);
-  }
-
-  private static double totalIterative(ShopItem[] shopItems) {
-    double total = 0;
-
-    for (int i = 0; i < shopItems.length; i++) {
-      total += shopItems[i].getTotal();
-    }
-
-    return total;
   }
 }
