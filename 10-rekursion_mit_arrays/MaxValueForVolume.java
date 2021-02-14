@@ -60,8 +60,8 @@ public class MaxValueForVolume {
 
     double withCurrent = 0;
     if (isFitting) {
-      withCurrent = values[index] +
-          maxValueForVolume(load - volumes[index], index + 1, volumes, values);
+      withCurrent = values[index]
+          + maxValueForVolume(load - volumes[index], index + 1, volumes, values);
     }
     double withoutCurrent = maxValueForVolume(load, index + 1, volumes, values);
 
